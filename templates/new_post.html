@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="mt-5 col-8 shadow-sm p-5 offset-2 mt-5 mb-5">
+    <h2 class="mb-3"> New Post : </h2>
+    <form class="form-group" action="/posts/new" method="POST">
+        <label for="title"> Title</label>
+        <input class="form-control" required='required' type="text" name="title" id="title">
+        <label for="content"> Content : </label>
+        <textarea class="form-control" name="content" id="content" cols="30" rows="5" required='required'
+            placeholder="text here .."></textarea>
+        <label for="author">Author</label>
+        <input class="form-control" type="text" id="author" name="author">
+        <br>
+        <button class=" w-100 btn btn-primary" type="submit">Post</button>
+    </form>
+</div>
+
+{% endblock %}

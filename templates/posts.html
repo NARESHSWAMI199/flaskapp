@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center mt-5">All posts</h1>
+
+    {% for item in blog_post %}
+    <div class=" shadow-sm p-5">
+        <h3> {{ item.title }} </h3>
+        <small>written by {{ item.author }} on {{ item.date_posted }} </h6></small>
+        <p> {{ item.content }} </p>
+        <a class="btn  btn-sm btn-primary" href="/posts/edit/{{ item.id }}">Edit</a>
+        <a class="btn  btn-sm btn-danger" href="/posts/delete/{{ item.id }}">Delete</a>
+
+    </div>
+    {% endfor %}
+    <div>
+    </div>
+</div>
+{% endblock %}

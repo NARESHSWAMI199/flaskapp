@@ -1,0 +1,22 @@
+<!-- {% from "formhelpers.html" import render_field %} -->
+
+{% extends 'base.html' %}
+{% block content %}
+<div class="offset-3 mt-5 col-6">
+<h2 class="mb-5"> Singup :  </h2>
+<form class="form-group p-2" method=post>
+    {{ form.username.label }}
+    {{ form.username(class_="form-control") }}
+    {{ form.email.label }}
+    {{ form.email(class_="form-control",size=32) }}
+    {{ form.password.label }}
+    {{ form.password(class_="form-control") }}
+    {{ form.confirm.label }}
+    {{ form.confirm(class_="form-control") }}
+    {{ form.accept_tos.label }}
+    {{ form.accept_tos(class_="form-check") }}
+    <br>
+  <p><input type=submit  class="btn btn-primary w-100" value=Register>
+</form>
+</div>
+{% endblock %}
